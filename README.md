@@ -61,10 +61,11 @@ Mutation
 * updateTodo(id: ID!, input: TodoInput): Update the specified todo.
 * deleteTodo(id: ID!, username: String!): Delete the specified todo.
 
-##Example Usage
+
+## Example Usage
 
 * To filter todos by category:
-https://github.com/Lijuan-Z/Todo_API/blob/main/image/TodoByCategory.png
+![image](https://github.com/Lijuan-Z/Todo_API/blob/main/image/TodoByCategory.png)
 
 * To create a new todo:
-https://github.com/Lijuan-Z/Todo_API/blob/main/image/createTodo.png
+![image](https://github.com/Lijuan-Z/Todo_API/blob/main/image/createTodo.png)
