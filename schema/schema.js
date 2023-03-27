@@ -15,7 +15,6 @@ type AuthData {
   token: String!
 }
 
-
 type Todo {
   id: ID!
   description: String!
@@ -24,6 +23,7 @@ type Todo {
   createdAt: String!
   updatedAt: String!
 }
+
 input RegisterInput {
   name: String!
   email: String!
