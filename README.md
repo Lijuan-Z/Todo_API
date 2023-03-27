@@ -23,8 +23,8 @@ Content of the project folder:
     /db.js	         # dataBase configure file
 ├── index.js             # main app file
 ├── models               
-    /Todo.js 		 # Mongoose model file for Todo
-    /User.js 		 # Mongoose model file for User
+    /todo.js 		 # Mongoose model file for Todo
+    /user.js 		 # Mongoose model file for User
 ├── resolvers 		 # 
     /resolvers.js 	 # GraphQL resolvers file
 ├── schema 		 # 
@@ -50,9 +50,9 @@ To get started with the API, follow these steps:
 
 ## API Endpoints
 Query
-* todos: Get all the todos in the database.
-* todoByCategory(category: String): Get the todos that belong to the specified category.
-* todoByOwner(owner: String): Get the todos that belong to the specified owner's name.
+* getTodos: Get all the todos in the database.
+* getTodoByCategory(category: String): Get the todos that belong to the specified category.
+* getTodoByOwner(owner: String): Get the todos that belong to the specified owner's name.
 
 Mutation
 * register(input: UserInput): Create a new user account.

@@ -43,9 +43,9 @@ input UpdateTodoInput {
 }
 
 type Query {
-  todos: [Todo!]!
-  todoByCategory(category: String!): [Todo!]!
-  todoByOwner(owner: String!): [Todo!]!
+  getTodos: [Todo!]!
+  getTodoByCategory(category: String!): [Todo!]!
+  getTodoByOwner(owner: String!): [Todo!]!
 }
 
 type Mutation {

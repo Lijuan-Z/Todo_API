@@ -18,18 +18,18 @@ const generateToken = (user) => {
 
 const resolvers = {
   Query: {
-    async todos() {
+    async getTodos() {
       const todos = await Todo.find({});
       return todos;
     },
-    async todoByCategory(_, { category }) {
+    async getTodoByCategory(_, { category }) {
       const todo = await Todo.find({ category });
       if (!todo) {
         throw new Error("Todo not found");
       }
       return todo;
     },
-    async todoByOwner(_, { owner }) {
+    async getTodoByOwner(_, { owner }) {
       const todo = await Todo.find({ owner });
       if (!todo) {
         throw new Error("Todo not found");
