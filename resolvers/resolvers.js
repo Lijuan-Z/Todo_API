@@ -56,7 +56,7 @@ const resolvers = {
     async login(_, { email, password }) {
       const user = await User.findOne({ email });
       if (!user) {
-        throw new Error("Invalid credentials");
+        throw new Error("User not found");
       }
       const isMatch = await bcrypt.compare(password, user.password);
       if (!isMatch) {
@@ -69,7 +69,7 @@ const resolvers = {
       const name = input.owner;
       const user = await User.findOne({ name });
       if (!user) {
-        throw new Error("Invalid credentials");
+        throw new Error("User not found");
       }
       const todo = new Todo({
         ...input,
@@ -84,7 +84,7 @@ const resolvers = {
         throw new Error("Todo not found");
       }
       if (String(todo.owner) !== String(input.username)) {
-        throw new Error("Unauthorized");
+        throw new Error("Unauthorized for Todo update");
       }
       Object.assign(todo, input);
       await todo.save();
@@ -96,7 +96,7 @@ const resolvers = {
         throw new Error("Todo not found");
       }
       if (String(todo.owner) !== String(username)) {
-        throw new Error("Unauthorized");
+        throw new Error("Unauthorized for Todo delete");
       }
       await todo.remove();
       return todo;
