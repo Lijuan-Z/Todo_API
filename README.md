@@ -7,7 +7,7 @@
 * [Example Usage](#example-usage)
 
 ## General Info
-This is a CRUD API for managing todo items with user authentication built using Node.js, GraphQL, and MySQL. The API allows users to create, read, update, and delete todo items, and search for items by various filters. The API also supports user authentication and authorization, so only the owner of a todo item can update or delete it.
+This is a CRUD API for managing todo items with user authentication built with Node.js, GraphQL, and MongoDB. The API allows users to create, read, update, and delete todo items, and search for items by various filters. The API also supports user authentication and authorization, so that only the owner of a todo item can update or delete it.
 
 ## Technologies
 Technologies used for this app:
