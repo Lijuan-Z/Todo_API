@@ -2,19 +2,19 @@ const mongoose = require("mongoose");
 
 const todoSchema = new mongoose.Schema(
   {
-    description: { 
+    description: {
       type: String, 
       required: true
-     },
-    category: { 
+    },
+    category: {
       type: String, 
       required: true 
     },
-    completed: { 
+    completed: {
       type: Boolean, 
       default: false 
     },
-    owner: { 
+    owner: {
       type: String, 
       ref: "User", 
       required: true 
@@ -25,4 +25,6 @@ const todoSchema = new mongoose.Schema(
   }
 );
 
-module.exports = mongoose.model("Todo", todoSchema);
+const Todo = mongoose.model('Todo', todoSchema);
+
+module.exports = Todo;

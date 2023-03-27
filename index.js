@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 const jwt = require('jsonwebtoken');
 
 
-const { MONGODB_URI, JWT_SECRET } = require('./config/db');
+const {JWT_SECRET } = require('./config/db');
 const typeDefs = require('./schema/schema');
 const resolvers = require('./resolvers/resolvers');
 
@@ -20,4 +20,4 @@ const server = new ApolloServer({
     }
   }
 });
-server.listen({ port: process.env.PORT || 4000 });
+server.listen({ port: 4000 });
